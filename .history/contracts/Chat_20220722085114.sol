@@ -38,13 +38,10 @@ contract Chat {
 
         uint[] memory ids = new uint[lastMessageId];
 
-           for (uint i = 1; i <= lastMessageId; i++) {
-      
-      // if the sender is different than me.
-      if(messages[i].sender != msg.sender) {
-        ids[numOfMessages] = messagesList[i].id;
-      }
-    }
-    return ids;
+        for(uint i = 1; i <= lastMessageId; i++){
+            if(messagesList[i] != msg.sender){
+                ids[]
+            }
+        }
     }
 }
