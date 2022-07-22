@@ -12,12 +12,9 @@ contract Chat {
         string message;
     }
 
-    event sendMessageEvent(uint indexed _id, address indexed _from, string _message);
-
     uint lastMessageId;
 
-    function sendMessage(string memory _text) public {
-        lastMessageId++;
-        emit sendMessageEvent(lastMessageId, msg.sender, _text);
-    }
+    event sendMessageEvent(uint indexed _id, address indexed _from, string _message);
+
+
 }
